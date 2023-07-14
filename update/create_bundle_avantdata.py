@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-CODE_PATH = "/home/kalish/work/avantdata/AvantDataTesteBundle"
+CODE_PATH = "/opt/AvantData/volumes/avantdata/codigo"
 BUNDLE = "/tmp/avantdata.bundle"
 COMMIT_NAME = "Update AvantData"
 
@@ -133,7 +133,6 @@ __pycache__/
         "git init",
         "git add .",
         f"""git -c user.email="suporte@avantdata.com.br" -c user.name="avantdata" commit -m '{COMMIT_NAME}'""",
-        f"rm -rf {BUNDLE}",
         f"git bundle create {BUNDLE} HEAD"
     ]
 
