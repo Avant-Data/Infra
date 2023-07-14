@@ -133,7 +133,7 @@ __pycache__/
         "git init",
         "git add .",
         f"""git -c user.email="suporte@avantdata.com.br" -c user.name="avantdata" commit -m '{COMMIT_NAME}'""",
-        f"git fetch{BUNDLE} HEAD:bundlebranch",
+        f"git fetch {BUNDLE} HEAD:bundlebranch",
         "git merge -s recursive -X theirs bundlebranch --allow-unrelated-histories",
         "git checkout --theirs .",
         "git add .",
