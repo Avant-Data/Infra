@@ -130,23 +130,20 @@ __pycache__/
         f.write(gitignore_content)
 
     commands = [
+        "git init",
         "git add .",
         f"""git -c user.email="suporte@avantdata.com.br" -c user.name="avantdata" commit -m '{COMMIT_NAME}'""",
         f"git fetch {BUNDLE} HEAD:bundlebranch",
         "git checkout bundlebranch",
     ]
 
-    ''' commands = [
-        "git init",
-        "git add .",
-        f"""git -c user.email="suporte@avantdata.com.br" -c user.name="avantdata" commit -m '{COMMIT_NAME}'""",
-        f"git fetch {BUNDLE} HEAD:bundlebranch",
+    ''' Funcionalidades de merge que pode ser implementada no futuro (agressivo por dar merge)
         "git merge -s recursive -X theirs bundlebranch --allow-unrelated-histories",
         "git checkout --theirs .",
         "git add .",
         f"""git commit -m '{COMMIT_NAME}'""",
         "chown -R 33:tape ."
-    ] '''
+    '''
 
     for command in commands:
         if not run_command(command):
