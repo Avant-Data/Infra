@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-CODE_PATH = "/opt/AvantData/volumes/avantdata/codigo"
+CODE_PATH = "/home/kalish/work/avantdata/AvantDataTesteBundle"
 BUNDLE = "/tmp/avantdata.bundle"
 COMMIT_NAME = "Update AvantData"
 
